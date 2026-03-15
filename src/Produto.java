@@ -1,4 +1,4 @@
-public class Produto {
+public class Produto implements ComponenteLogistica{
     private String nome;
     private double preco;
 
@@ -6,10 +6,9 @@ public class Produto {
         this.nome = nome;
         this.preco = preco;
     }
-    public double getPreco() {
-        return preco;
-    }
-    public String getNome() {
-        return nome;
+
+    @Override
+    public double calcularPreco() {
+        return preco; // A folha apenas retorna o seu valor
     }
 }
